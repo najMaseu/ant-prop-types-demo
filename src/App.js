@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/form" element={<FormDemo />} />
-          <Route path="/class" element={<ClassComponentDemo />} />
+          <Route path="/class" element={<ClassComponentDemo data-cy="class-comp" />} />
           <Route path="/hoc" element={<ShibaPhoto />} />
         </Routes>
       </div>

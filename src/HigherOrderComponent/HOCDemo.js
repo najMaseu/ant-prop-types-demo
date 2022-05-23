@@ -4,7 +4,6 @@ import { getRandomDogData } from "../api/dogCEO";
 import { Row, Col } from "antd";
 import PropTypes from 'prop-types';
 
-//fix me
 export const DogPhoto = ({ breed }) => {
   const [dogUrl, setDogUrl] = useState("");
 

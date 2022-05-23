@@ -94,7 +94,6 @@ export const FormDemo = () => {
           prevValues.gender !== currentValues.gender
         }
       >
-        {/* Ewww what is that? */}
         {({ getFieldValue }) =>
           getFieldValue("gender") === "other" ? (
             <Form.Item

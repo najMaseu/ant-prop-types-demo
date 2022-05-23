@@ -1,28 +1,28 @@
 import React from "react";
 import { Button } from "antd";
 
-//Hello im a class component
 class ClassComponentDemo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { change: true };
+    this.state = { btnVisible: true };
   }
+  
   render() {
+    const {btnVisible} = this.state;
+
     return (
-      //here is the jsx 
-      <div>
-        {/* What do squiggly brackets do? */}
-        {this.state.change && (
+      <div {...this.props}>
+        {btnVisible && (
           <Button
             onClick={() => {
-              this.setState({ change: !this.state.change });
+              this.setState({ btnVisible: !btnVisible });
             }}
           >
             Don't click me!
           </Button>
         )}
-        {this.state.change ? (
-          <h1>Do not click the button &gt;:C</h1>
+        {btnVisible ? (
+          <h1 data-cy="msg">Do not click the button &gt;:C</h1>
         ) : (
           <h1>Y u lik dis :(</h1>
         )}
